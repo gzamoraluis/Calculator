@@ -14,7 +14,15 @@
     <link rel="icon" href="icon-512.png" sizes="512x512">
 </head>
 <body>
-    <div class="container">
+<div id="offline-message" style="display:none;">
+  <p>⚠️ Estás offline, pero la app sigue funcionando.</p>
+</div>
+<script>
+  window.addEventListener('offline', () => {
+    document.getElementById('offline-message').style.display = 'block';
+  });
+</script>    
+<div class="container">
         <div class="language-toggle">
             <button class="toggle-btn" id="languageToggle">
                 <span id="languageText">Español</span> 🌐
